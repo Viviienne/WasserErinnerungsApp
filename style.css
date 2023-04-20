@@ -36,11 +36,22 @@ footer{
 
 .button {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
+  background-color: #001c3a;
+  border: 1px solid rgb(106, 107, 189);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  position: relative;
 }
+
+ .button:hover {
+    box-shadow: 1px 1px 25px 10px rgba(146, 148, 248, 0.4);
+  }
 
 a {
   color: #f4f4f4;
   text-transform: uppercase;
-}
-
+  text-decoration: none;
+   }
