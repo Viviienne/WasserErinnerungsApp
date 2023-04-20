@@ -37,13 +37,6 @@ footer{
 .button {
   display: flex;
   flex-direction: column; 
-  background-color: #001c3a;
-  border: 1px solid rgb(106, 107, 189);
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  position: relative;
 }
 
  .button:hover {
@@ -54,4 +47,22 @@ a {
   color: #f4f4f4;
   text-transform: uppercase;
   text-decoration: none;
+  background-color: #001c3a;
+  border: 1px solid rgb(106, 107, 189);
+  border-radius: 5px;
+  padding: 5px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  
    }
+
+.remind-laterButton{
+    position: relative;
+    overflow: hidden;
+  }
+
+.drank-waterButton{
+    position: relative;
+    overflow: hidden;
+  }
+ 
