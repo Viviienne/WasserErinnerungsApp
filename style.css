@@ -64,4 +64,14 @@ footer{
       position: relative;
       overflow: hidden;
     }
-  
+
+.glass {
+  margin: 10px;
+  background-color: #001c3a5c;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #333;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+}
