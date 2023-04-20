@@ -34,35 +34,34 @@ footer{
     margin-bottom: 20px;
   }
 
-.button {
-  display: flex;
-  flex-direction: column; 
-}
-
- 
-a {
-  color: #f4f4f4;
-  text-transform: uppercase;
-  text-decoration: none;
-  background-color: #001c3a;
-  border: 1px solid rgb(106, 107, 189);
-  border-radius: 5px;
-  padding: 5px;
-  margin-right: 10px;
-  margin-bottom: 10px;
+  .button {
+    display: flex;
+    flex-direction: column; 
    }
 
-a:hover {
-    box-shadow: 1px 1px 10px 5px rgba(146, 148, 248, 0.4);
-  }
+  a {
+    color: #f4f4f4;
+    text-transform: uppercase;
+    text-decoration: none;
+    background-color: #001c3a;
+    border: 1px solid rgb(106, 107, 189);
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    }
 
-.remind-laterButton{
-    position: relative;
-    overflow: hidden;
-  }
+  a:hover {
+      box-shadow: 1px 1px 10px 5px rgba(146, 148, 248, 0.4);
+    }
 
-.drank-waterButton{
-    position: relative;
-    overflow: hidden;
-  }
- 
+  .remind-laterButton{
+      position: relative;
+      overflow: hidden;
+    }
+
+  .drank-waterButton{
+      position: relative;
+      overflow: hidden;
+    }
+  
