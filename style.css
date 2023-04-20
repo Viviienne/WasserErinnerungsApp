@@ -38,3 +38,9 @@ footer{
   display: flex;
   flex-direction: column;
 }
+
+a {
+  color: #f4f4f4;
+  text-transform: uppercase;
+}
+
