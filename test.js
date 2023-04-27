@@ -10,6 +10,16 @@ button.addEventListener("click", () => {
     })
 })
 
+
+const source = new EventSource('/events');
+source.onmessage =(event) => {
+    console.log(event.data);
+    console.log(event.orgin);
+    console.log(event.lastEventId);
+
+
+}
+
   
 const glass1 = document.getElementById("glass1");
 glass1.addEventListener("click", function() {
