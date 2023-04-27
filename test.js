@@ -1,5 +1,13 @@
 const button = document.getElementById("remind-laterButton") // as HTMLButtonElement;
 
+
+button.addEventListener("click", () => {
+    setTimeout(()=> {
+         sendNotification();
+    }, 30 * 60 * 1000);
+   
+});
+
 function sendNotification(){
 if ("Notification" in window){
     Notification.requestPermission().then(permission=>{
@@ -24,10 +32,6 @@ function setReminder(){
 
     },3 * 60 * 60 *1000);
 }
-
-button.addEventListener("click", () => {
-    sendNotification();
-});
 
 setReminder();
   
