@@ -10,14 +10,10 @@ button.addEventListener("click", () => {
     })
 })
 
-
 const glass1 = document.getElementById("glass1");
-function changeColor() {
-glass1.style.backgroundColor = "#3a226c";
-}
-glass1.addEventListener("click", changeColor);
-
-
+glass1.addEventListener("click", function() {
+  glass1.style.backgroundColor = "#3a226c";
+});
 
 const glass2 = document.getElementById("glass2");
 function changeColor() {
