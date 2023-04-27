@@ -43,3 +43,4 @@ resetBtn.addEventListener("click", function() {
   }
 });
 
+const glasses = document.querySelectorAll(".glass");
