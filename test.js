@@ -1,9 +1,6 @@
 const button = document.getElementById("remind-laterButton") // as HTMLButtonElement;
 
-
-
-
-
+function sendNotification(){}
 
 button.addEventListener("click", () => {
     sendNotification();
