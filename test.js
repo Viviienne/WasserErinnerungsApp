@@ -10,19 +10,7 @@ button.addEventListener("click", () => {
     })
 })
 
-
-
-
-function setupNotifications() {
-    const notificationTimes = [
-      { hour: 9, minute: 0 },   // 9:00 AM
-      { hour: 11, minute: 0 },  // 11:00 AM
-      { hour: 13, minute: 0 },  // 1:00 PM
-      { hour: 15, minute: 0 },  // 3:00 PM
-      { hour: 17, minute: 0 }   // 5:00 PM
-    ];
   
-}
 const glass1 = document.getElementById("glass1");
 glass1.addEventListener("click", function() {
   glass1.style.backgroundColor = "#3a226c";
