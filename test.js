@@ -12,9 +12,39 @@ button.addEventListener("click", () => {
 
 
 const glass1 = document.getElementById("glass1");
-
 function changeColor() {
 glass1.style.backgroundColor = "#3a226c";
 }
-
 glass1.addEventListener("click", changeColor);
+
+
+
+const glass2 = document.getElementById("glass2");
+function changeColor() {
+glass2.style.backgroundColor = "#3a226c";
+
+glass2.addEventListener("click", changeColor);
+}
+
+
+const glass3 = document.getElementById("glass3");
+function changeColor() {
+glass3.style.backgroundColor = "#3a226c";
+
+glass3.addEventListener("click", changeColor);
+}
+
+
+const glass4 = document.getElementById("glass4");
+function changeColor() {
+glass4.style.backgroundColor = "#3a226c";
+}
+glass4.addEventListener("click", changeColor);
+
+
+
+const glass5 = document.getElementById("glass5");
+function changeColor() {
+glass5.style.backgroundColor = "#3a226c";
+}
+glass5.addEventListener("click", changeColor);
