@@ -86,6 +86,7 @@ footer{
 }
 
 .glass:hover {
-  background-color: white;
+  background-color: #6d6382;
+  transition: 400ms;
 }
 
