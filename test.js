@@ -11,7 +11,10 @@ button.addEventListener("click", () => {
 })
 
 
-const glass1 = document.getElementById("glass1") //as HTMLDivElement;
-glass1.addEventListener ("click"), function (){
-glass1.style.backgroundColor = "blue";
+const glass1 = document.getElementById("glass1");
+
+function changeColor() {
+  glass1.style.backgroundColor = "blue";
 }
+
+glass1.addEventListener("click", changeColor);
