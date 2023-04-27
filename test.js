@@ -1,5 +1,10 @@
 const button = document.getElementById("remind-laterButton") // as HTMLButtonElement;
 
+
+
+
+
+
 button.addEventListener("click", () => {
     Notification.requestPermission().then(perm => {
         if (perm === "granted"){
@@ -8,7 +13,7 @@ button.addEventListener("click", () => {
             })
         }
     })
-})
+});
 
 
   
