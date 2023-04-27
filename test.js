@@ -34,3 +34,12 @@ const glass5 = document.getElementById("glass5");
 glass5.addEventListener("click", function() {
   glass5.style.backgroundColor = "#3a226c";
 });
+
+const resetBtn = document.getElementById("reset");
+resetBtn.addEventListener("click", function() {
+  const glasses = document.querySelectorAll(".glass");
+  for (let i = 0; i < glasses.length; i++) {
+    glasses[i].style.backgroundColor = "";
+  }
+});
+
