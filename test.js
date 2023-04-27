@@ -29,7 +29,7 @@ button.addEventListener("click", () => {
     sendNotification();
 });
 
-
+setReminder();
   
 const glass1 = document.getElementById("glass1");
 glass1.addEventListener("click", function() {
