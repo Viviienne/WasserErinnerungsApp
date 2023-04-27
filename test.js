@@ -22,7 +22,7 @@ function setReminder(){
         
         }
 
-    },1 * 60 * 60 *1000);
+    },3 * 60 * 60 *1000);
 }
 
 button.addEventListener("click", () => {
