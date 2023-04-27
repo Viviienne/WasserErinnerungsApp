@@ -4,7 +4,7 @@ function sendNotification(){
 if ("Notification" in window){
     Notification.requestPermission().then(permission=>{
         if (permission === "granted"){
-            const notfication = new Notification("Erinnerung", {
+         new Notification("Erinnerung", {
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
