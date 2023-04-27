@@ -44,3 +44,10 @@ resetBtn.addEventListener("click", function() {
 });
 
 const glasses = document.querySelectorAll(".glass");
+
+for (let i = 0; i < glasses.length; i++) {
+    glasses[i].addEventListener("click", function() {
+      glasses[i].style.backgroundColor = "#3a226c";
+      checkAllGlassesClicked();
+    });
+  }
