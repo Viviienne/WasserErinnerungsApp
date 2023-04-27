@@ -6,13 +6,7 @@ const button = document.getElementById("remind-laterButton") // as HTMLButtonEle
 
 
 button.addEventListener("click", () => {
-    Notification.requestPermission().then(perm => {
-        if (perm === "granted"){
-            new Notification ("Erinnerung",{
-                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken"
-            })
-        }
-    })
+    sendNotification();
 });
 
 
