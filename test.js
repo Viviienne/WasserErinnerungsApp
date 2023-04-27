@@ -51,3 +51,17 @@ for (let i = 0; i < glasses.length; i++) {
       checkAllGlassesClicked();
     });
   }
+
+function checkAllGlassesClicked() {
+  let allClicked = true;
+  for (let i = 0; i < glasses.length; i++) {
+    if (glasses[i].style.backgroundColor !== "rgb(58, 34, 108)") {
+      allClicked = false;
+      break;
+    }
+  }
+
+  if (allClicked )  {
+    alert("Tagesziel erreicht!");
+  }
+}
