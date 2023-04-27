@@ -4,13 +4,25 @@ function sendNotification(){
 if ("Notification" in window){
     Notification.requestPermission().then(permission=>{
         if (permission === "granted"){
-            const notfication = new Notification("Erinnerung",{
+            const notfication = new Notification("Erinnerung", {
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
         }
     });
 }   
+}
+
+function setReminder(){
+    setInterval(()=> {
+        const now = new Date();
+        const hour = now.getHours();
+        if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
+            sendNotification();
+        
+        }
+
+    })
 }
 
 button.addEventListener("click", () => {
