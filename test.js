@@ -22,7 +22,7 @@ function setupNotifications() {
       { hour: 17, minute: 0 }   // 5:00 PM
     ];
   
-
+}
 const glass1 = document.getElementById("glass1");
 glass1.addEventListener("click", function() {
   glass1.style.backgroundColor = "#3a226c";
