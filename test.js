@@ -96,3 +96,8 @@ function checkAllGlassesClicked() {
 }
 
 
+localStorage.setItem('glassesDrank',5);
+
+const glassesDrank = localStorage.getItem('glassesDrank');
+console.log('Du hast §{glassesDrank} heute getrunken');
+
