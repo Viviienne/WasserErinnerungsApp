@@ -1,7 +1,7 @@
 const button = document.getElementById("remind-laterButton") // as HTMLButtonElement;
 
 function sendNotification(){
-if (Notification in window){
+if ("Notification" in window){
     Notification.requestPermission().then(permission=>{
         if (permission === "granted"){
             const notfication = new Notification("Erinnerung",{
