@@ -12,10 +12,10 @@ if ("Notification" in window){
     Notification.requestPermission().then((perm)=>{
         if (perm === "granted"){
           console.log("granted")
-         new Notification("Erinnerung")//, {
-                //body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+         new Notification("Erinnerung", {
+                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
-            //});
+            });
         }
     });
 }   
@@ -25,7 +25,7 @@ function setReminder(){
     setInterval(()=> {
         const now = new Date();
         const hour = now.getHours();
-        if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
+        if (hour === 7|| hour === 10 || hour ===11 || hour === 16 || hour === 19) {
             sendNotification();
         
         }
