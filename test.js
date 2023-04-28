@@ -98,3 +98,6 @@ function checkAllGlassesClicked() {
     alert("Tagesziel erreicht!");
   }
 }
+
+
+
