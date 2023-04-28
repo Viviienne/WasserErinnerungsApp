@@ -1,7 +1,11 @@
+window.addEventListener('load', function() {
+  sendNotification();
+});
+
 function sendNotification(){
 if ("Notification" in window){
-    Notification.requestPermission().then(permission=>{
-        if (permission === "granted"){
+    Notification.requestPermission().then(perm=>{
+        if (perm === "granted"){
          new Notification("Erinnerung", {
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
@@ -94,10 +98,3 @@ function checkAllGlassesClicked() {
     alert("Tagesziel erreicht!");
   }
 }
-
-
-localStorage.setItem('glassesDrank',5);
-
-const glassesDrank = localStorage.getItem('glassesDrank');
-console.log('Du hast §{glassesDrank} heute getrunken');
-
