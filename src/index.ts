@@ -1,12 +1,6 @@
-const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
-const glass1 = document.getElementById("glass1") as HTMLElement ;
-const glass2 = document.getElementById("glass2") as HTMLElement;
-const glass3 = document.getElementById("glass3") as HTMLElement;
-const glass4 = document.getElementById("glass4") as HTMLElement;
-const glass5 = document.getElementById("glass5")as HTMLElement;
-
-
-
+const html = document.documentElement;
+const body = document.body;
+const head = document.head;
 
 window.addEventListener('load', function() {
   sendNotification();
@@ -39,9 +33,7 @@ function setReminder(){
     },3 * 60 * 60 *1000);
 }
 
-
-
-
+const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
 
 button.addEventListener("click", () => {
     setTimeout(()=> {
@@ -50,9 +42,13 @@ button.addEventListener("click", () => {
    
 });
 
-
 setReminder();
 
+const glass1 = document.getElementById("glass1") as HTMLElement ;
+const glass2 = document.getElementById("glass2") as HTMLElement;
+const glass3 = document.getElementById("glass3") as HTMLElement;
+const glass4 = document.getElementById("glass4") as HTMLElement;
+const glass5 = document.getElementById("glass5")as HTMLElement;
 
   
 
