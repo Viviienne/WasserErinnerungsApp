@@ -1,9 +1,3 @@
-document.documentElement;
-document.body;
-document.head;
-
-
-
 const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
 const glass1 = document.getElementById("glass1") as HTMLElement ;
 const glass2 = document.getElementById("glass2") as HTMLElement;
