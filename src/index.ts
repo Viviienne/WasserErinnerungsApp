@@ -8,7 +8,6 @@ window.addEventListener('load', function() {
 
 function sendNotification(){
 if ("Notification" in window){
-  console.log("hallo")
     Notification.requestPermission().then((perm)=>{
         if (perm === "granted"){
           console.log("granted")
@@ -16,6 +15,7 @@ if ("Notification" in window){
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
+            console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
         }
     });
 }   
@@ -26,6 +26,7 @@ function setReminder(){
         const now = new Date();
         const hour = now.getHours();
         if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
+          console.log(' Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken')
             sendNotification();
         
         }
@@ -36,11 +37,13 @@ function setReminder(){
 const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
 
 button.addEventListener("click", () => {
+  console.log("Reminding later in 30 minutes...");
     setTimeout(()=> {
          sendNotification();
     }, 30 * 60 * 1000);
    
 });
+
 
 setReminder();
 

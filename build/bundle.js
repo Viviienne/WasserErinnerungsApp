@@ -1,24 +1,18 @@
 (function () {
     'use strict';
 
-    const button = document.getElementById("remind-laterButton");
-    const glass1 = document.getElementById("glass1");
-    const glass2 = document.getElementById("glass2");
-    const glass3 = document.getElementById("glass3");
-    const glass4 = document.getElementById("glass4");
-    const glass5 = document.getElementById("glass5");
     window.addEventListener('load', function () {
         sendNotification();
     });
     function sendNotification() {
         if ("Notification" in window) {
-            console.log("hallo");
             Notification.requestPermission().then((perm) => {
                 if (perm === "granted") {
                     console.log("granted");
                     new Notification("Erinnerung", {
                         body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
                     });
+                    console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
                 }
             });
         }
@@ -28,16 +22,24 @@
             const now = new Date();
             const hour = now.getHours();
             if (hour === 7 || hour === 10 || hour === 13 || hour === 16 || hour === 19) {
+                console.log(' Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken');
                 sendNotification();
             }
         }, 3 * 60 * 60 * 1000);
     }
+    const button = document.getElementById("remind-laterButton");
     button.addEventListener("click", () => {
+        console.log("Reminding later in 30 minutes...");
         setTimeout(() => {
             sendNotification();
         }, 30 * 60 * 1000);
     });
     setReminder();
+    const glass1 = document.getElementById("glass1");
+    const glass2 = document.getElementById("glass2");
+    const glass3 = document.getElementById("glass3");
+    const glass4 = document.getElementById("glass4");
+    const glass5 = document.getElementById("glass5");
     glass1.addEventListener("click", function () {
         glass1.style.backgroundColor = "#3a226c";
     });
