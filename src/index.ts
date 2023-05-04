@@ -1,18 +1,16 @@
-const html = document.documentElement;
-const body = document.body;
-const head = document.head;
 
-window.addEventListener('load', function() {
+
+window.addEventListener('load', () => {
   sendNotification();
 });
 
-function sendNotification(){
+function sendNotification(): void {
 if ("Notification" in window){
-    Notification.requestPermission().then((perm)=>{
+    Notification.requestPermission().then((perm: NotificationPermission)=>{
         if (perm === "granted"){
           console.log("granted")
          new Notification("Erinnerung", {
-                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+            body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
             console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
@@ -21,10 +19,10 @@ if ("Notification" in window){
 }   
 }
 
-function setReminder(){
-    setInterval(()=> {
-        const now = new Date();
-        const hour = now.getHours();
+function setReminder(): void {
+    setInterval(() => {
+        const now: Date = new Date();
+        const hour: number = now.getHours();
         if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
           console.log(' Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken')
             sendNotification();
@@ -36,9 +34,9 @@ function setReminder(){
 
 const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
 
-button.addEventListener("click", () => {
-  console.log("Reminding later in 30 minutes...");
-    setTimeout(()=> {
+button.addEventListener("click", (): void => {
+  console.log("Erinnerung wird  in 30 minuten...");
+    setTimeout((): void => {
          sendNotification();
     }, 30 * 60 * 1000);
    
@@ -55,34 +53,34 @@ const glass5 = document.getElementById("glass5")as HTMLElement;
 
   
 
-glass1.addEventListener("click", function() {
+glass1.addEventListener("click", (): void => {
   glass1.style.backgroundColor = "#3a226c";
 });
 
 
-glass2.addEventListener("click", function() {
+glass2.addEventListener("click", (): void => {
   glass2.style.backgroundColor = "#3a226c";
 });
 
 
-glass3.addEventListener("click", function() {
+glass3.addEventListener("click", (): void => {
   glass3.style.backgroundColor = "#3a226c";
 });
 
 
-glass4.addEventListener("click", function() {
+glass4.addEventListener("click", (): void => {
   glass4.style.backgroundColor = "#3a226c";
 });
 
 
-glass5.addEventListener("click", function() {
+glass5.addEventListener("click", (): void => {
   glass5.style.backgroundColor = "#3a226c";
 });
 
 const resetBtn = document.getElementById("reset") as HTMLButtonElement;
 const glasses = document.querySelectorAll(".glass") as NodeListOf<HTMLElement>;
 
-resetBtn.addEventListener("click", () => {
+resetBtn.addEventListener("click", (): void => {
   for (let i = 0; i < glasses.length; i++) {
     glasses[i].style.backgroundColor = "";
   }
@@ -95,7 +93,7 @@ for (let i = 0; i < glasses.length; i++) {
   });
 }
 
-function checkAllGlassesClicked() {
+function checkAllGlassesClicked(): void {
   let allClicked = true;
   for (let i = 0; i < glasses.length; i++) {
     if (glasses[i].style.backgroundColor !== "rgb(58, 34, 108)") {
