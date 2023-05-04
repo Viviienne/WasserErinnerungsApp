@@ -1,7 +1,7 @@
 (function () {
     'use strict';
 
-    window.addEventListener('load', function () {
+    window.addEventListener('load', () => {
         sendNotification();
     });
     function sendNotification() {
@@ -29,7 +29,7 @@
     }
     const button = document.getElementById("remind-laterButton");
     button.addEventListener("click", () => {
-        console.log("Reminding later in 30 minutes...");
+        console.log("Erinnerung wird  in 30 minuten...");
         setTimeout(() => {
             sendNotification();
         }, 30 * 60 * 1000);
@@ -40,19 +40,19 @@
     const glass3 = document.getElementById("glass3");
     const glass4 = document.getElementById("glass4");
     const glass5 = document.getElementById("glass5");
-    glass1.addEventListener("click", function () {
+    glass1.addEventListener("click", () => {
         glass1.style.backgroundColor = "#3a226c";
     });
-    glass2.addEventListener("click", function () {
+    glass2.addEventListener("click", () => {
         glass2.style.backgroundColor = "#3a226c";
     });
-    glass3.addEventListener("click", function () {
+    glass3.addEventListener("click", () => {
         glass3.style.backgroundColor = "#3a226c";
     });
-    glass4.addEventListener("click", function () {
+    glass4.addEventListener("click", () => {
         glass4.style.backgroundColor = "#3a226c";
     });
-    glass5.addEventListener("click", function () {
+    glass5.addEventListener("click", () => {
         glass5.style.backgroundColor = "#3a226c";
     });
     const resetBtn = document.getElementById("reset");
