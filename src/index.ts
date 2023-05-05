@@ -1,10 +1,12 @@
 import { checkAllGlassesClicked } from "./glasses";
 import {  glass1, glass2, glass3, glass4, glass5, resetBtn, button} from "./dom";
-import { sendNotification, } from "./notification";
+import { sendNotification, permNotification, setReminder } from "./notification";
 
 function initApp() {
     resetBtn.addEventListener("click",checkAllGlassesClicked);
     button.addEventListener("click",sendNotification);
+    window.addEventListener("load", setReminder);
+    window.addEventListener("load", permNotification);
     
     glass1.addEventListener("click", (): void => {
     glass1.style.backgroundColor = "#3a226c";

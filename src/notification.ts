@@ -43,4 +43,4 @@ function sendNotification(): void {
   
   
     
-  export {sendNotification};
+  export {sendNotification, permNotification, setReminder};
