@@ -1,43 +1,8 @@
 import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
 
-glass1.addEventListener("click", (): void => {
-    glass1.style.backgroundColor = "#3a226c";
-  });
-  
-  
-  glass2.addEventListener("click", (): void => {
-    glass2.style.backgroundColor = "#3a226c";
-  });
-  
-  
-  glass3.addEventListener("click", (): void => {
-    glass3.style.backgroundColor = "#3a226c";
-  });
-  
-  
-  glass4.addEventListener("click", (): void => {
-    glass4.style.backgroundColor = "#3a226c";
-  });
-  
-  
-  glass5.addEventListener("click", (): void => {
-    glass5.style.backgroundColor = "#3a226c";
-  });
-  
-    
-  resetBtn.addEventListener("click", (): void => {
-    for (let i = 0; i < glasses.length; i++) {
-      glasses[i].style.backgroundColor = "";
-    }
-  });
-  
-  for (let i = 0; i < glasses.length; i++) {
-    glasses[i].addEventListener("click", () => {
-      glasses[i].style.backgroundColor = "#3a226c";
-      checkAllGlassesClicked();
-    });
-  }
-  
+//Gläßer lassen sich klicken
+
+
   function checkAllGlassesClicked(): void {
     let allClicked = true;
     for (let i = 0; i < glasses.length; i++) {
@@ -53,4 +18,21 @@ glass1.addEventListener("click", (): void => {
   }
   
 
-  export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses};
+
+// Reset Button
+    
+  resetBtn.addEventListener("click", (): void => {
+    for (let i = 0; i < glasses.length; i++) {
+      glasses[i].style.backgroundColor = "";
+    }
+  });
+  
+  for (let i = 0; i < glasses.length; i++) {
+    glasses[i].addEventListener("click", () => {
+      glasses[i].style.backgroundColor = "#3a226c";
+      checkAllGlassesClicked();
+    });
+  }
+
+
+  export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses, checkAllGlassesClicked};

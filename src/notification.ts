@@ -48,4 +48,4 @@ window.addEventListener('load', () => {
   setReminder();
   
     
-  
+  export{sendNotification}
