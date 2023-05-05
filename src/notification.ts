@@ -22,9 +22,11 @@ window.addEventListener('load', () => {
   }   
   }
 
- function setReminder(): {
- setInterval(sendNotification,3 * 60 * 60 *1000)
-
+ function setReminder(): void {
+ setInterval(() => {
+    sendNotification
+  }, 3 * 60 * 60 *1000);
+ 
 }
 
 setReminder();
