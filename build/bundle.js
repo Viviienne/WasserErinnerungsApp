@@ -47,20 +47,15 @@
                     new Notification("Erinnerung", {
                         body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
                     });
-                    console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
+                    // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
                 }
             });
         }
     }
     function setReminder() {
         setInterval(() => {
-            const now = new Date();
-            const hour = now.getHours();
-            if (hour === 7 || hour === 10 || hour === 13 || hour === 16 || hour === 19) {
-                console.log(' Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken');
-                sendNotification();
-            }
-        }, 3 * 60 * 60 * 1000);
+            sendNotification();
+        }, /*3 * 60 * 60 * */ 3000);
     }
     button.addEventListener("click", () => {
         console.log("Erinnerung wird  in 30 minuten erneut gesendet");
@@ -68,7 +63,9 @@
             sendNotification();
         }, 30 * 60 * 1000);
     });
-    setReminder();
+    window.addEventListener("load", () => {
+        setReminder();
+    });
 
     function initApp() {
         resetBtn.addEventListener("click", checkAllGlassesClicked);

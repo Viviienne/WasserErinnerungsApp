@@ -4,28 +4,32 @@ import {button} from "./dom";
 
 
 window.addEventListener('load', () => {
-    sendNotification();
+    permNotification();
   });
   
-  function sendNotification(): void {
+  function permNotification(): void {
+    function sendNotification(): void {
+        if ("Notification" in window && Notification.permission === "granted") {
+        new Notification("Erinnerung", {
+            body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+          });
+        }
+    }
+        
   if ("Notification" in window){
-      Notification.requestPermission().then((perm: NotificationPermission)=>{
+    Notification.requestPermission().then((perm: NotificationPermission)=>{
           if (perm === "granted"){
             console.log("granted")
-           new Notification("Erinnerung", {
-              body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-  
-              });
-              console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
+            sendNotification();             // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
           }
       });
   }   
   }
 
  function setReminder(): void {
- setInterval(() => {
-    sendNotification();
-  }, /*3 * 60 * 60 * */1000);
+    setInterval(() => {
+        sendNotification();
+     }, /*3 * 60 * 60 * */ 3000);
  }
 
   
@@ -43,4 +47,4 @@ window.addEventListener('load', () => {
   
   
     
-  export{sendNotification}
+  export {sendNotification};
