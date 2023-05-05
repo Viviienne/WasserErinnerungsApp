@@ -24,10 +24,9 @@ window.addEventListener('load', () => {
 
  function setReminder(): void {
  setInterval(() => {
-    sendNotification
+    sendNotification();
   }, 3 * 60 * 60 *1000);
- 
-}
+ }
 
 setReminder();
 
