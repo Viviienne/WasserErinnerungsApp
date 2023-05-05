@@ -28,7 +28,6 @@ window.addEventListener('load', () => {
   }, 3 * 60 * 60 *1000);
  }
 
-setReminder();
 
 
   
@@ -40,7 +39,8 @@ setReminder();
      
   });
   
-  
+  setReminder();
+
   
   
     
