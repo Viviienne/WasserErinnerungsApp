@@ -36,17 +36,19 @@
         });
     }
 
-    window.addEventListener('load', () => {
-        sendNotification();
-    });
     function sendNotification() {
+        if ("Notification" in window && Notification.permission === "granted") {
+            new Notification("Erinnerung", {
+                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+            });
+        }
+    }
+    function permNotification() {
         if ("Notification" in window) {
             Notification.requestPermission().then((perm) => {
                 if (perm === "granted") {
                     console.log("granted");
-                    new Notification("Erinnerung", {
-                        body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-                    });
+                    sendNotification();
                     // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
                 }
             });
@@ -65,6 +67,7 @@
     });
     window.addEventListener("load", () => {
         setReminder();
+        permNotification();
     });
 
     function initApp() {
