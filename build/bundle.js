@@ -71,8 +71,12 @@
     });
 
     function initApp() {
+        permNotification();
+        setReminder();
         resetBtn.addEventListener("click", checkAllGlassesClicked);
         button.addEventListener("click", sendNotification);
+        window.addEventListener("load", setReminder);
+        window.addEventListener("load", permNotification);
         glass1.addEventListener("click", () => {
             glass1.style.backgroundColor = "#3a226c";
         });

@@ -3,6 +3,8 @@ import {  glass1, glass2, glass3, glass4, glass5, resetBtn, button} from "./dom"
 import { sendNotification, permNotification, setReminder } from "./notification";
 
 function initApp() {
+    permNotification();
+    setReminder();
     resetBtn.addEventListener("click",checkAllGlassesClicked);
     button.addEventListener("click",sendNotification);
     window.addEventListener("load", setReminder);
@@ -24,7 +26,7 @@ function initApp() {
   
   
     glass4.addEventListener("click", (): void => {
-   glass4.style.backgroundColor = "#3a226c";
+    glass4.style.backgroundColor = "#3a226c";
     });
   
   
@@ -32,6 +34,7 @@ function initApp() {
     glass5.style.backgroundColor = "#3a226c";
     });
   
+
 }
 
 
