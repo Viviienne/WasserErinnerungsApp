@@ -3,9 +3,6 @@ import {button} from "./dom";
 
 
 
-window.addEventListener('load', () => {
-    permNotification();
-  });
   
   function permNotification(): void {
     function sendNotification(): void {
@@ -41,8 +38,10 @@ window.addEventListener('load', () => {
      
   });
   
+  
   window.addEventListener("load", () => {
     setReminder();
+    permNotification();
   });
   
   
