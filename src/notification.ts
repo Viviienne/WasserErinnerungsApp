@@ -1,23 +1,20 @@
 
 import {button} from "./dom";
 
-
-
-  
-  function permNotification(): void {
-    function sendNotification(): void {
-        if ("Notification" in window && Notification.permission === "granted") {
-        new Notification("Erinnerung", {
-            body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-          });
-        }
+function sendNotification(): void {
+    if ("Notification" in window && Notification.permission === "granted") {
+    new Notification("Erinnerung", {
+        body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+      });
     }
-        
+}
+ function permNotification(): void {      
   if ("Notification" in window){
     Notification.requestPermission().then((perm: NotificationPermission)=>{
           if (perm === "granted"){
             console.log("granted")
-            sendNotification();             // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
+            sendNotification();             
+            // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
           }
       });
   }   
