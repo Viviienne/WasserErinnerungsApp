@@ -21,20 +21,15 @@ window.addEventListener('load', () => {
       });
   }   
   }
-  
-  function setReminder(): void {
-      setInterval(() => {
-          const now: Date = new Date();
-          const hour: number = now.getHours();
-          if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
-            console.log(' Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken')
-              sendNotification();
-          
-          }
-  
-      },3 * 60 * 60 *1000);
-  }
-  
+
+ function setReminder(): {
+ setInterval(sendNotification,3 * 60 * 60 *1000)
+
+}
+
+setReminder();
+
+
   
   button.addEventListener("click", (): void => {
     console.log("Erinnerung wird  in 30 minuten erneut gesendet");
@@ -45,7 +40,7 @@ window.addEventListener('load', () => {
   });
   
   
-  setReminder();
+  
   
     
   export{sendNotification}
