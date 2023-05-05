@@ -36,11 +36,15 @@
         });
     }
 
+    window.addEventListener("load", () => {
+        permNotification();
+    });
     function sendNotification() {
-        if ("Notification" in window && Notification.permission === "granted") {
+        if (Notification.permission === "granted") {
             new Notification("Erinnerung", {
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
             });
+            console.log(" Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
         }
     }
     function permNotification() {
@@ -49,33 +53,24 @@
                 if (perm === "granted") {
                     console.log("granted");
                     sendNotification();
-                    // console.log("Notification displayed: Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
                 }
             });
         }
     }
-    function setReminder() {
-        setInterval(() => {
-            sendNotification();
-        }, /*3 * 60 * 60 * */ 3000);
-    }
+    setInterval(() => {
+        sendNotification();
+    }, /*3 * 60 * 60 * */ 3000);
     button.addEventListener("click", () => {
         console.log("Erinnerung wird  in 30 minuten erneut gesendet");
         setTimeout(() => {
             sendNotification();
         }, 30 * 60 * 1000);
     });
-    window.addEventListener("load", () => {
-        setReminder();
-        permNotification();
-    });
 
     function initApp() {
         permNotification();
-        setReminder();
         resetBtn.addEventListener("click", checkAllGlassesClicked);
         button.addEventListener("click", sendNotification);
-        window.addEventListener("load", setReminder);
         window.addEventListener("load", permNotification);
         glass1.addEventListener("click", () => {
             glass1.style.backgroundColor = "#3a226c";
