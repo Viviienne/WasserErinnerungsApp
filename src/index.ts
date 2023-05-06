@@ -1,11 +1,11 @@
 import { checkAllGlassesClicked } from "./glasses";
-import {  glass1, glass2, glass3, glass4, glass5, resetBtn,} from "./dom";
+import {  glass1, glass2, glass3, glass4, glass5, resetBtn, button} from "./dom";
 import { sendNotification, permNotification, } from "./notification";
 
 function initApp() {
     
     resetBtn.addEventListener("click",checkAllGlassesClicked);
-    
+    button.addEventListener("click",sendNotification);
     
     window.addEventListener("load", permNotification);
     

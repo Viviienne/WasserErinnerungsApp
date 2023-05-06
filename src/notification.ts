@@ -1,4 +1,5 @@
 
+import {button} from "./dom";
 
 //Berechtigung erfragen
 
@@ -32,7 +33,15 @@ window.addEventListener("load", () => {
         sendNotification();
      }, /*3 * 60 * 60 * */ 3000);
  
-//Später Erinnern 
+//Später Erinnern
+  
+  button.addEventListener("click", (): void => {
+    console.log("Erinnerung wird  in 30 minuten erneut gesendet");
+      setTimeout((): void => {
+           sendNotification();
+      }, /*30 * 60 * */1000);
+     
+  });
   
   
  
