@@ -1,3 +1,17 @@
+const button = document.querySelector("button")
+
+button.addEventListener("click", () => {
+  Notification.requestPermission().then(perm => {
+    if (perm === "granted"){
+    new Notification("Please Work, i want to sleep so badly")
+    }
+  })
+})
+
+
+/*document.documentElement;
+document.body;
+document.head;
 
 window.addEventListener('load', function() {
   sendNotification();
@@ -13,21 +27,11 @@ if ("Notification" in window){
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
-        } else if (Notification.permission !== "denied") {
-          Notification.requestPermission().then((perm) => {
-            if (perm === "granted") {
-              console.log("granted");
-              new Notification("Erinnerung", {
-                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-              });
-            }
-          });
         }
     });
 }   
 }
 
-/*
 function setReminder(){
     setInterval(()=> {
         const now = new Date();
@@ -40,10 +44,10 @@ function setReminder(){
     },3 * 60 * 60 *1000);
 }
 
-setReminder();
-*/
 
 const button = document.getElementById("remindLaterButton") // as HTMLButtonElement;
+
+
 button.addEventListener("click", () => {
     setTimeout(()=> {
          sendNotification();
@@ -52,9 +56,9 @@ button.addEventListener("click", () => {
 });
 
 
+setReminder();
 
-
-
+*/
   
 const glass1 = document.getElementById("glass1");
 glass1.addEventListener("click", function() {
