@@ -1,20 +1,12 @@
 
 import {button} from "./dom";
 
+//Berechtigung erfragen
+
 window.addEventListener("load", () => {
         permNotification();
   });
   
-  
-
-function sendNotification(): void {
-    if (Notification.permission === "granted") {
-    new Notification("Erinnerung", {
-        body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-      });
-      console.log(" Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
-    }
-}
  function permNotification(): void {      
   if ("Notification" in window){
     Notification.requestPermission().then((perm: NotificationPermission)=>{
@@ -26,18 +18,28 @@ function sendNotification(): void {
   }   
   }
 
+  //Erinnerung schicken
+
+  function sendNotification(): void {
+    console.log(" Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
+    
+    new Notification("Erinnerung", {
+        body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+      });
+      
+    }
 
     setInterval(() => {
         sendNotification();
      }, /*3 * 60 * 60 * */ 3000);
  
-
+//Später Erinnern 
   
   button.addEventListener("click", (): void => {
     console.log("Erinnerung wird  in 30 minuten erneut gesendet");
       setTimeout((): void => {
            sendNotification();
-      }, 30 * 60 * 1000);
+      }, /*30 * 60 * */1000);
      
   });
   

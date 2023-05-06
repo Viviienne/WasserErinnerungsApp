@@ -1,4 +1,4 @@
-import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
+import {resetBtn, glasses} from "./dom";
 
 //Gläßer lassen sich klicken
 
@@ -11,7 +11,8 @@ import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
         break;
       }
     }
-  
+// Ausgabe wenn alle Gläßer geklickt wurden
+
     if (allClicked) {
       alert("Tagesziel erreicht!");
     }
@@ -35,4 +36,4 @@ import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
   }
 
 
-  export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses, checkAllGlassesClicked};
+  export {resetBtn, glasses, checkAllGlassesClicked};

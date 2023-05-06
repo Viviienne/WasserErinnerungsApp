@@ -3,7 +3,6 @@ import {  glass1, glass2, glass3, glass4, glass5, resetBtn, button} from "./dom"
 import { sendNotification, permNotification, } from "./notification";
 
 function initApp() {
-    permNotification();
     
     resetBtn.addEventListener("click",checkAllGlassesClicked);
     button.addEventListener("click",sendNotification);

@@ -39,14 +39,6 @@
     window.addEventListener("load", () => {
         permNotification();
     });
-    function sendNotification() {
-        if (Notification.permission === "granted") {
-            new Notification("Erinnerung", {
-                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
-            });
-            console.log(" Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
-        }
-    }
     function permNotification() {
         if ("Notification" in window) {
             Notification.requestPermission().then((perm) => {
@@ -57,6 +49,12 @@
             });
         }
     }
+    function sendNotification() {
+        console.log(" Erinnerung - Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken");
+        new Notification("Erinnerung", {
+            body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+        });
+    }
     setInterval(() => {
         sendNotification();
     }, /*3 * 60 * 60 * */ 3000);
@@ -64,11 +62,10 @@
         console.log("Erinnerung wird  in 30 minuten erneut gesendet");
         setTimeout(() => {
             sendNotification();
-        }, 30 * 60 * 1000);
+        }, /*30 * 60 * */ 1000);
     });
 
     function initApp() {
-        permNotification();
         resetBtn.addEventListener("click", checkAllGlassesClicked);
         button.addEventListener("click", sendNotification);
         window.addEventListener("load", permNotification);
