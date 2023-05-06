@@ -1,6 +1,3 @@
-document.documentElement;
-document.body;
-document.head;
 
 window.addEventListener('load', function() {
   sendNotification();
@@ -16,11 +13,21 @@ if ("Notification" in window){
                 body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
 
             });
+        } else if (Notification.permission !== "denied") {
+          Notification.requestPermission().then((perm) => {
+            if (perm === "granted") {
+              console.log("granted");
+              new Notification("Erinnerung", {
+                body: "Erfrische Geist und Körper - es ist Zeit, Wasser zu trinken",
+              });
+            }
+          });
         }
     });
 }   
 }
 
+/*
 function setReminder(){
     setInterval(()=> {
         const now = new Date();
@@ -33,19 +40,19 @@ function setReminder(){
     },3 * 60 * 60 *1000);
 }
 
+setReminder();
+*/
 
-const button = document.getElementById("remind-laterButton") // as HTMLButtonElement;
-
-
+const button = document.getElementById("remindLaterButton") // as HTMLButtonElement;
 button.addEventListener("click", () => {
     setTimeout(()=> {
          sendNotification();
-    }, 30 * 60 * 1000);
+    },  1000);
    
 });
 
 
-setReminder();
+
 
 
   
