@@ -1,3 +1,13 @@
+document.documentElement;
+document.body;
+document.head;
+
+
+
+
+
+
+
 window.addEventListener('load', function() {
   sendNotification();
 });
@@ -45,28 +55,27 @@ setReminder();
 
 
   
-const glass1 = document.getElementById("glass1") as HTMLButtonElement ;
-glass1.addEventListener("click", (): void => {
-    glass1.style.backgroundColor = "#3a226c";
-    });
-  
+const glass1 = document.getElementById("glass1") as HTMLElement ;
+glass1.addEventListener("click", function() {
+  glass1.style.backgroundColor = "#3a226c";
+});
 
-const glass2 = document.getElementById("glass2") as HTMLButtonElement;
+const glass2 = document.getElementById("glass2") as HTMLElement;
 glass2.addEventListener("click", function() {
   glass2.style.backgroundColor = "#3a226c";
 });
 
-const glass3 = document.getElementById("glass3") as HTMLButtonElement;
+const glass3 = document.getElementById("glass3") as HTMLElement;
 glass3.addEventListener("click", function() {
   glass3.style.backgroundColor = "#3a226c";
 });
 
-const glass4 = document.getElementById("glass4") as HTMLButtonElement;
+const glass4 = document.getElementById("glass4") as HTMLElement;
 glass4.addEventListener("click", function() {
   glass4.style.backgroundColor = "#3a226c";
 });
 
-const glass5 = document.getElementById("glass5")as HTMLButtonElement;
+const glass5 = document.getElementById("glass5")as HTMLElement;
 glass5.addEventListener("click", function() {
   glass5.style.backgroundColor = "#3a226c";
 });
