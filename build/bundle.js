@@ -1,9 +1,8 @@
 (function () {
     'use strict';
 
-    //DOM
+    const startApp = document.getElementById("startApp");
     const button = document.getElementById("remindLaterButton");
-    document.querySelector('.textArea');
     const glass1 = document.getElementById("glass1");
     const glass2 = document.getElementById("glass2");
     const glass3 = document.getElementById("glass3");
@@ -11,6 +10,7 @@
     const glass5 = document.getElementById("glass5");
     const resetBtn = document.getElementById("reset");
     const glasses = document.querySelectorAll(".glass");
+
     //Laden der Notification Funktion beim aufrufen der Seite
     window.addEventListener('load', function () {
         sendNotification();
@@ -47,6 +47,7 @@
     });
     //Funktion die Intervall aufruft
     setReminder();
+
     //Gläßer
     glass1.addEventListener("click", function () {
         glass1.style.backgroundColor = "#3a226c";
@@ -95,5 +96,21 @@
             checkAllGlassesClicked();
         });
     }
+
+    startApp.addEventListener("click", () => {
+        sendNotification();
+        setReminder();
+        for (let i = 0; i < glasses.length; i++) {
+            glasses[i].addEventListener("click", () => {
+                glasses[i].style.backgroundColor = "#3a226c";
+                checkAllGlassesClicked();
+            });
+        }
+        resetBtn.addEventListener("click", () => {
+            for (let i = 0; i < glasses.length; i++) {
+                glasses[i].style.backgroundColor = "";
+            }
+        });
+    });
 
 })();

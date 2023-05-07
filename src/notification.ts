@@ -53,4 +53,4 @@ window.addEventListener('load', function() {
   
   
 
-export {button, };
+export {button, sendNotification, setReminder,};

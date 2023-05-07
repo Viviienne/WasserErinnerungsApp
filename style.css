@@ -39,10 +39,6 @@ footer{
     margin-bottom: 20px;
   }
 
-  .textArea.active{
-      box-shadow: 1px 1px 10px 5px rgba(6, 9, 181, 0.228);
-    }
-
   .textArea  p {
     font-size: 17px;
     margin: 35px 0px 35px 0px;
@@ -91,7 +87,7 @@ footer{
     margin-bottom: 10px;
     transition-duration: 500ms;
    }
-#startAPP:hover{
+#startApp:hover{
   box-shadow: 1px 1px 10px 5px rgba(6, 9, 181, 0.228);
   color: rgb(207, 207, 207);
   background-color: #1f0a48;
