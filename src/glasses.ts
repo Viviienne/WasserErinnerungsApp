@@ -65,5 +65,5 @@ glass1.addEventListener("click", function() {
     }
   
 
-export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses};
+export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses, checkAllGlassesClicked};
 
