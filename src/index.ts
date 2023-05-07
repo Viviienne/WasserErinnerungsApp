@@ -1,16 +1,25 @@
-document.documentElement;
-document.body;
-document.head;
+//DOM
+
+const button = document.getElementById("remindLaterButton") as HTMLButtonElement;
+const reminderArea = document.querySelector('.textArea') as HTMLElement;
+
+const glass1 = document.getElementById("glass1") as HTMLElement;
+const glass2 = document.getElementById("glass2") as HTMLElement;
+const glass3 = document.getElementById("glass3") as HTMLElement;
+const glass4 = document.getElementById("glass4") as HTMLElement;
+const glass5 = document.getElementById("glass5") as HTMLElement;
+
+const resetBtn = document.getElementById("reset") as HTMLButtonElement;
+const glasses = document.querySelectorAll(".glass") as NodeListOf<HTMLElement>;
 
 
-
-
-
-
+//Laden der Notification Funktion beim aufrufen der Seite
 
 window.addEventListener('load', function() {
   sendNotification();
 });
+
+//Senden der Zustimmung und der Notification
 
 function sendNotification(){
 if ("Notification" in window){
@@ -27,6 +36,8 @@ if ("Notification" in window){
 }   
 }
 
+//Erinnerungsintervall Festlegen
+
 function setReminder(){
     setInterval(()=> {
         const now = new Date();
@@ -39,9 +50,7 @@ function setReminder(){
     },3 * 60 * 60 *1000);
 }
 
-
-const button = document.getElementById("remindLaterButton")  as HTMLButtonElement;
-
+//Butoon zum Später erinnern
 
 button.addEventListener("click", () => {
     setTimeout(()=> {
@@ -50,17 +59,14 @@ button.addEventListener("click", () => {
    
 });
 
+//Funktion die Intervall aufruft
 
 setReminder();
 
 
-const glass1 = document.getElementById("glass1") as HTMLElement;
-const glass2 = document.getElementById("glass2") as HTMLElement;
-const glass3 = document.getElementById("glass3") as HTMLElement;
-const glass4 = document.getElementById("glass4") as HTMLElement;
-const glass5 = document.getElementById("glass5") as HTMLElement;
 
 
+//Gläßer
 
 glass1.addEventListener("click", function() {
   glass1.style.backgroundColor = "#3a226c";
@@ -83,17 +89,17 @@ glass5.addEventListener("click", function() {
   glass5.style.backgroundColor = "#3a226c";
 });
 
-const resetBtn = document.getElementById("reset") as HTMLButtonElement;
+//Reset Button
+
 resetBtn.addEventListener("click", function() {
   for (let i = 0; i < glasses.length; i++) {
     glasses[i].style.backgroundColor = "";
   }
 });
 
-const glasses = document.querySelectorAll(".glass") as NodeListOf<HTMLElement>;
+
 
 //Gläßer lassen sich klicken
-
 
 function checkAllGlassesClicked(): void {
     let allClicked = true;
@@ -103,6 +109,7 @@ function checkAllGlassesClicked(): void {
         break;
       }
     }
+
 // Ausgabe wenn alle Gläßer geklickt wurden
 
     if (allClicked) {
@@ -110,8 +117,6 @@ function checkAllGlassesClicked(): void {
     }
   }
   
-
-
 // Reset Button
     
   resetBtn.addEventListener("click", (): void => {
