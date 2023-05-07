@@ -40,7 +40,7 @@ function setReminder(){
 }
 
 
-const button = document.getElementById("remind-laterButton")  as HTMLButtonElement;
+const button = document.getElementById("remindLaterButton")  as HTMLButtonElement;
 
 
 button.addEventListener("click", () => {
@@ -54,28 +54,31 @@ button.addEventListener("click", () => {
 setReminder();
 
 
-  
-const glass1 = document.getElementById("glass1") as HTMLElement ;
+const glass1 = document.getElementById("glass1") as HTMLElement;
+const glass2 = document.getElementById("glass2") as HTMLElement;
+const glass3 = document.getElementById("glass3") as HTMLElement;
+const glass4 = document.getElementById("glass4") as HTMLElement;
+const glass5 = document.getElementById("glass5") as HTMLElement;
+
+
+
 glass1.addEventListener("click", function() {
   glass1.style.backgroundColor = "#3a226c";
 });
 
-const glass2 = document.getElementById("glass2") as HTMLElement;
 glass2.addEventListener("click", function() {
   glass2.style.backgroundColor = "#3a226c";
 });
 
-const glass3 = document.getElementById("glass3") as HTMLElement;
+
 glass3.addEventListener("click", function() {
   glass3.style.backgroundColor = "#3a226c";
 });
 
-const glass4 = document.getElementById("glass4") as HTMLElement;
 glass4.addEventListener("click", function() {
   glass4.style.backgroundColor = "#3a226c";
 });
 
-const glass5 = document.getElementById("glass5")as HTMLElement;
 glass5.addEventListener("click", function() {
   glass5.style.backgroundColor = "#3a226c";
 });
@@ -89,23 +92,37 @@ resetBtn.addEventListener("click", function() {
 
 const glasses = document.querySelectorAll(".glass") as NodeListOf<HTMLElement>;
 
-for (let i = 0; i < glasses.length; i++) {
-    glasses[i].addEventListener("click", function() {
+//Gläßer lassen sich klicken
+
+
+function checkAllGlassesClicked(): void {
+    let allClicked = true;
+    for (let i = 0; i < glasses.length; i++) {
+      if (glasses[i].style.backgroundColor !== "rgb(58, 34, 108)") {
+        allClicked = false;
+        break;
+      }
+    }
+// Ausgabe wenn alle Gläßer geklickt wurden
+
+    if (allClicked) {
+      alert("Tagesziel erreicht!");
+    }
+  }
+  
+
+
+// Reset Button
+    
+  resetBtn.addEventListener("click", (): void => {
+    for (let i = 0; i < glasses.length; i++) {
+      glasses[i].style.backgroundColor = "";
+    }
+  });
+  
+  for (let i = 0; i < glasses.length; i++) {
+    glasses[i].addEventListener("click", () => {
       glasses[i].style.backgroundColor = "#3a226c";
       checkAllGlassesClicked();
     });
   }
-
-function checkAllGlassesClicked() {
-  let allClicked = true;
-  for (let i = 0; i < glasses.length; i++) {
-    if (glasses[i].style.backgroundColor !== "rgb(58, 34, 108)") {
-      allClicked = false;
-      break;
-    }
-  }
-
-  if (allClicked )  {
-    alert("Tagesziel erreicht!");
-  }
-}
