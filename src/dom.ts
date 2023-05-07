@@ -1,5 +1,5 @@
 const button = document.getElementById("remindLaterButton") as HTMLButtonElement;
-const reminderArea = document.querySelector('.textArea') as HTMLElement;
+
 
 const glass1 = document.getElementById("glass1") as HTMLElement;
 const glass2 = document.getElementById("glass2") as HTMLElement;
@@ -10,5 +10,5 @@ const glass5 = document.getElementById("glass5") as HTMLElement;
 const resetBtn = document.getElementById("reset") as HTMLButtonElement;
 const glasses = document.querySelectorAll(".glass") as NodeListOf<HTMLElement>;
 
-export {button,reminderArea, glass1, glass2, glass3, glass4, glass5, resetBtn, glasses};
+export {button, glass1, glass2, glass3, glass4, glass5, resetBtn, glasses};
 
