@@ -1,11 +1,11 @@
 import { startApp, glasses, resetBtn} from "./dom";
-import { sendNotification, setReminder } from "./notification";
+import { sendNotification, sendIntervalNotification} from "./notification";
 import { checkAllGlassesClicked } from "./glasses";
 
 
 startApp.addEventListener("click", () => {
   sendNotification();
-  setReminder();
+  sendIntervalNotification();
   for (let i = 0; i < glasses.length; i++) {
     glasses[i].addEventListener("click", () => {
       glasses[i].style.backgroundColor = "#3a226c";

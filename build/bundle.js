@@ -29,14 +29,10 @@
             });
         }
     }
-    //Erinnerungsintervall Festlegen
-    function setReminder() {
+    // Erinnerungen alle drei Stunden senden
+    function sendIntervalNotification() {
         setInterval(() => {
-            const now = new Date();
-            const hour = now.getHours();
-            if (hour === 7 || hour === 10 || hour === 13 || hour === 16 || hour === 19) {
-                sendNotification();
-            }
+            sendNotification();
         }, 3 * 60 * 60 * 1000);
     }
     //Butoon zum Später erinnern
@@ -45,8 +41,6 @@
             sendNotification();
         }, 30 * 60 * 1000);
     });
-    //Funktion die Intervall aufruft
-    setReminder();
 
     //Gläßer
     glass1.addEventListener("click", function () {
@@ -99,7 +93,7 @@
 
     startApp.addEventListener("click", () => {
         sendNotification();
-        setReminder();
+        sendIntervalNotification();
         for (let i = 0; i < glasses.length; i++) {
             glasses[i].addEventListener("click", () => {
                 glasses[i].style.backgroundColor = "#3a226c";

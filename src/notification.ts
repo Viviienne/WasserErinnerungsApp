@@ -22,19 +22,13 @@ window.addEventListener('load', function() {
       });
   }   
   }
+
+  // Erinnerungen alle drei Stunden senden
   
-  //Erinnerungsintervall Festlegen
-  
-  function setReminder(){
-      setInterval(()=> {
-          const now = new Date();
-          const hour = now.getHours();
-          if (hour === 7|| hour === 10 || hour ===13 || hour === 16 || hour === 19) {
-              sendNotification();
-          
-          }
-  
-      },3 * 60 * 60 *1000);
+  function sendIntervalNotification() {
+    setInterval(() => {
+      sendNotification();
+    }, 3 * 60 * 60 * 1000);
   }
   
   //Butoon zum Später erinnern
@@ -48,9 +42,9 @@ window.addEventListener('load', function() {
   
   //Funktion die Intervall aufruft
   
-  setReminder();
+ 
   
   
   
 
-export {button, sendNotification, setReminder,};
+export {button, sendNotification, sendIntervalNotification};
