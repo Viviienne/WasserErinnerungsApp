@@ -1,5 +1,6 @@
 import {button, } from "./dom";
 
+
 //Laden der Notification Funktion beim aufrufen der Seite
 
 window.addEventListener('load', function() {
@@ -30,7 +31,6 @@ window.addEventListener('load', function() {
       sendNotification();
     }, 3 * 60 * 60 * 1000);
   }
-  
   //Butoon zum Später erinnern
   
   button.addEventListener("click", () => {
@@ -47,4 +47,4 @@ window.addEventListener('load', function() {
   
   
 
-export {button, sendNotification, sendIntervalNotification};
+export {button, sendNotification, sendIntervalNotification };
