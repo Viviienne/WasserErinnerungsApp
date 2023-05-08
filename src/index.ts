@@ -2,7 +2,7 @@ import { startApp, glasses, resetBtn} from "./dom";
 import { sendNotification, sendIntervalNotification} from "./notification";
 import { checkAllGlassesClicked } from "./glasses";
 
-
+//App Starten
 startApp.addEventListener("click", () => {
   sendNotification();
   sendIntervalNotification();
