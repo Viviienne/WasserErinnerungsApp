@@ -1,11 +1,7 @@
 import {button, } from "./dom";
 
 
-//Laden der Notification Funktion beim aufrufen der Seite
 
-window.addEventListener('load', function() {
-    sendNotification();
-  });
   
   //Senden der Zustimmung und der Notification
   
@@ -29,7 +25,7 @@ window.addEventListener('load', function() {
   function sendIntervalNotification() {
     setInterval(() => {
       sendNotification();
-    }, 3 * 60 * 60 * 1000);
+    }, 3 * 60 * 60 *  1000);
   }
   //Butoon zum Später erinnern
   

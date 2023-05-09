@@ -11,10 +11,6 @@
     const resetBtn = document.getElementById("reset");
     const glasses = document.querySelectorAll(".glass");
 
-    //Laden der Notification Funktion beim aufrufen der Seite
-    window.addEventListener('load', function () {
-        sendNotification();
-    });
     //Senden der Zustimmung und der Notification
     function sendNotification() {
         if ("Notification" in window) {
@@ -91,6 +87,7 @@
         });
     }
 
+    //App Starten
     startApp.addEventListener("click", () => {
         sendNotification();
         sendIntervalNotification();
