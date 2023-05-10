@@ -3,8 +3,6 @@ window.addEventListener('load', function() {
   sendNotification();
 });
 
-
-
 function sendNotification(){
 if ("Notification" in window){
   console.log("hallo");
@@ -19,22 +17,7 @@ console
     });
 }   
 }
-/*
-function setReminder(){
-    setInterval(()=> {
-        const now = new Date();
-        const hour = now.getHours();
-        if (hour === 7|| hour === 10 || hour ===11 || hour === 16 || hour === 19) {
-            sendNotification();
-        
-        }
 
-    },3 * 60 * 60 *1000);
-}
-
-setReminder();
-
-*/
 
 const button = document.getElementById("remind-laterButton"); // as HTMLButtonElement;
 
@@ -45,9 +28,6 @@ button.addEventListener("click", () => {
     },  60 * 1000);
    
 });
-
-
-
 
   
 const glass1 = document.getElementById("glass1");
