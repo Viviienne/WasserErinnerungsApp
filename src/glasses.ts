@@ -1,6 +1,6 @@
 import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
 
-//Gläßer
+//Gläser
 
 glass1.addEventListener("click", function() {
     glass1.style.backgroundColor = "#3a226c";
@@ -31,7 +31,7 @@ glass1.addEventListener("click", function() {
     }
   });
   
-    //Gläßer lassen sich klicken
+    //Gläser lassen sich klicken
   
   function checkAllGlassesClicked(): void {
       let allClicked = true;
@@ -42,7 +42,7 @@ glass1.addEventListener("click", function() {
         }
       }
   
-  // Ausgabe wenn alle Gläßer geklickt wurden
+  // Ausgabe wenn alle Gläser geklickt wurden
   
       if (allClicked) {
         alert("Tagesziel erreicht!");

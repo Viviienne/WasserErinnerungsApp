@@ -38,7 +38,7 @@
         }, 30 * 60 * 1000);
     });
 
-    //Gläßer
+    //Gläser
     glass1.addEventListener("click", function () {
         glass1.style.backgroundColor = "#3a226c";
     });
@@ -60,7 +60,7 @@
             glasses[i].style.backgroundColor = "";
         }
     });
-    //Gläßer lassen sich klicken
+    //Gläser lassen sich klicken
     function checkAllGlassesClicked() {
         let allClicked = true;
         for (let i = 0; i < glasses.length; i++) {
@@ -69,7 +69,7 @@
                 break;
             }
         }
-        // Ausgabe wenn alle Gläßer geklickt wurden
+        // Ausgabe wenn alle Gläser geklickt wurden
         if (allClicked) {
             alert("Tagesziel erreicht!");
         }
