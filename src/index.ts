@@ -1,4 +1,4 @@
-import { startApp, glasses, resetBtn} from "./dom";
+import { startApp} from "./dom";
 import { sendNotification, sendIntervalNotification} from "./notification";
 import { setUpGlasses } from "./glasses";
 

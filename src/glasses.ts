@@ -33,7 +33,7 @@ glass1.addEventListener("click", function() {
     }
   });
   
-    //Gläser lassen sich klicken
+    //Gläser werden überptüft
   
   function checkAllGlassesClicked(): void {
       let allClicked = true;

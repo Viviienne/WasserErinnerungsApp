@@ -61,7 +61,7 @@
                 glasses[i].style.backgroundColor = "";
             }
         });
-        //Gläser lassen sich klicken
+        //Gläser werden überptüft
         function checkAllGlassesClicked() {
             let allClicked = true;
             for (let i = 0; i < glasses.length; i++) {
