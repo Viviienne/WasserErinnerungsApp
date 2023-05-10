@@ -54,8 +54,8 @@
     glass5.addEventListener("click", function () {
         glass5.style.backgroundColor = "#3a226c";
     });
-    //Reset Button
-    resetBtn.addEventListener("click", function () {
+    // Reset Button
+    resetBtn.addEventListener("click", () => {
         for (let i = 0; i < glasses.length; i++) {
             glasses[i].style.backgroundColor = "";
         }
@@ -69,17 +69,10 @@
                 break;
             }
         }
-        // Ausgabe wenn alle Gläser geklickt wurden
         if (allClicked) {
             alert("Tagesziel erreicht!");
         }
     }
-    // Reset Button
-    resetBtn.addEventListener("click", () => {
-        for (let i = 0; i < glasses.length; i++) {
-            glasses[i].style.backgroundColor = "";
-        }
-    });
     for (let i = 0; i < glasses.length; i++) {
         glasses[i].addEventListener("click", () => {
             glasses[i].style.backgroundColor = "#3a226c";
