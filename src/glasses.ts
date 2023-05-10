@@ -1,5 +1,7 @@
 import {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses} from "./dom";
 
+function setUpGlasses() {
+
 //Gläser
 
 glass1.addEventListener("click", function() {
@@ -23,9 +25,9 @@ glass1.addEventListener("click", function() {
     glass5.style.backgroundColor = "#3a226c";
   });
   
-   // Reset Button
-      
-   resetBtn.addEventListener("click", (): void => {
+  //Reset Button
+  
+  resetBtn.addEventListener("click", function() {
     for (let i = 0; i < glasses.length; i++) {
       glasses[i].style.backgroundColor = "";
     }
@@ -41,21 +43,21 @@ glass1.addEventListener("click", function() {
           break;
         }
       }
-        
+  
+  // Ausgabe wenn alle Gläser geklickt wurden
+  
       if (allClicked) {
         alert("Tagesziel erreicht!");
       }
     }
-    
-      for (let i = 0; i < glasses.length; i++) {
-        glasses[i].addEventListener("click", () => {
-          glasses[i].style.backgroundColor = "#3a226c";
-          checkAllGlassesClicked();
-        });
-      }
+      
+    for (let i = 0; i < glasses.length; i++) {
+      glasses[i].addEventListener("click", () => {
+        glasses[i].style.backgroundColor = "#3a226c";
+        checkAllGlassesClicked();
+      });
+    }
+}
 
-  // Ausgabe wenn alle Gläser geklickt wurden
-  
-    
-export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses, checkAllGlassesClicked};
+export {glass1, glass2, glass3, glass4, glass5, resetBtn, glasses, setUpGlasses}
 
