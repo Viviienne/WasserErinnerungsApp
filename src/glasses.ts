@@ -4,26 +4,7 @@ function setUpGlasses() {
 
 //Gläser
 
-glass1.addEventListener("click", function() {
-    glass1.style.backgroundColor = "#3a226c";
-  });
-  
-  glass2.addEventListener("click", function() {
-    glass2.style.backgroundColor = "#3a226c";
-  });
-  
-  
-  glass3.addEventListener("click", function() {
-    glass3.style.backgroundColor = "#3a226c";
-  });
-  
-  glass4.addEventListener("click", function() {
-    glass4.style.backgroundColor = "#3a226c";
-  });
-  
-  glass5.addEventListener("click", function() {
-    glass5.style.backgroundColor = "#3a226c";
-  });
+
   
   //Reset Button
   

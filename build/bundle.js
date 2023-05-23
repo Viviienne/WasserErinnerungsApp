@@ -3,11 +3,11 @@
 
     const startApp = document.getElementById("startApp");
     const button = document.getElementById("remindLaterButton");
-    const glass1 = document.getElementById("glass1");
-    const glass2 = document.getElementById("glass2");
-    const glass3 = document.getElementById("glass3");
-    const glass4 = document.getElementById("glass4");
-    const glass5 = document.getElementById("glass5");
+    document.getElementById("glass1");
+    document.getElementById("glass2");
+    document.getElementById("glass3");
+    document.getElementById("glass4");
+    document.getElementById("glass5");
     const resetBtn = document.getElementById("reset");
     const glasses = document.querySelectorAll(".glass");
 
@@ -40,21 +40,6 @@
 
     function setUpGlasses() {
         //Gläser
-        glass1.addEventListener("click", function () {
-            glass1.style.backgroundColor = "#3a226c";
-        });
-        glass2.addEventListener("click", function () {
-            glass2.style.backgroundColor = "#3a226c";
-        });
-        glass3.addEventListener("click", function () {
-            glass3.style.backgroundColor = "#3a226c";
-        });
-        glass4.addEventListener("click", function () {
-            glass4.style.backgroundColor = "#3a226c";
-        });
-        glass5.addEventListener("click", function () {
-            glass5.style.backgroundColor = "#3a226c";
-        });
         //Reset Button
         resetBtn.addEventListener("click", function () {
             for (let i = 0; i < glasses.length; i++) {
